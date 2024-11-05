@@ -37,8 +37,35 @@ body {
   gap: 0.3em;
   font-weight: 500;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
   img {
     width: 2em;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 300%;
+    top: -100%;
+    left: 0;
+    width: 40%;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    transform: rotate(45deg);
+    transition: left 1s;
+    left: -200%;
+    opacity: 0;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+      left: 200%;
+    }
   }
 }
 
@@ -117,6 +144,7 @@ body {
         content: "";
         position: absolute;
         bottom: 0;
+        left: 0;
         height: 2px;
         width: 100%;
         background: $main-gradient;
@@ -204,6 +232,9 @@ body {
 
 main {
   background-color: #e2e2e2;
+  background-image: url("../Resources/Images/bg/center_bg.png");
+  background-size: cover;
+  background-position: center;
   width: 100%;
   flex: 1;
   .body_content {
@@ -258,15 +289,138 @@ main {
     border-radius: 10px;
     overflow: hidden;
     align-items: stretch;
+    min-height: 450px;
   }
   .main_section {
     margin-top: 30px;
     .section_title {
       align-self: flex-start;
-      margin-bottom: 10px;
       font-size: 25px;
+      margin-bottom: 10px;
       img {
         width: 45px;
+      }
+    }
+  }
+  .section_bg {
+    background-position: top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding-top: 0;
+  }
+  .sports_section {
+    background-image: url("./Images/bg/sports_bg.jpg");
+    @extend .section_bg;
+  }
+  .casino_section {
+    background-image: url("./Images/bg/casino_bg.jpg");
+    @extend .section_bg;
+  }
+  .slot_section {
+    background-image: url("./Images/bg/slot_bg.jpg");
+    @extend .section_bg;
+  }
+  .racebook_section {
+    background-image: url("./Images/bg/racebook_bg.jpg");
+    @extend .section_bg;
+    .section_title {
+      margin-bottom: 80px;
+    }
+  }
+  .fishing_section {
+    background-image: url("./Images/bg/fishing_bg.jpg");
+    @extend .section_bg;
+  }
+  .lottery_section {
+    background-image: url("./Images/bg/lottery_bg.jpg");
+    @extend .section_bg;
+    .section_title {
+      margin-bottom: 80px;
+    }
+  }
+
+  .game_lobby {
+    .lobby_nav {
+      align-items: stretch;
+      gap: 5px;
+      .nav_item {
+        min-width: 100px;
+        justify-content: center;
+        @extend .button_2;
+        img {
+          height: 30px;
+          width: auto;
+          mix-blend-mode: luminosity;
+        }
+      }
+      .nav_item.nav_active {
+        @extend .button_1;
+        img {
+          height: 30px;
+          width: auto;
+          mix-blend-mode: normal;
+        }
+      }
+    }
+    .lobby_subnav {
+      gap: 15px;
+      padding: 10px;
+      margin: 10px 0;
+      .lobby_subnav_item {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .lobby_subnav_active {
+        @extend .gradient_text;
+        font-weight: bold;
+      }
+    }
+    .lobby {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(5, 150px);
+      .game {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        .badges {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          gap: 2px;
+          .badge {
+            color: white;
+            padding: 3px 5px;
+            border-radius: 2px;
+            font-size: 12px;
+          }
+        }
+        .thumbnail {
+          width: 100%;
+        }
+        .hover {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          gap: 10px;
+          background: rgba(0, 0, 0, 0.8);
+          opacity: 0;
+          transition: 0.3s;
+          z-index: 2;
+          .play_btn {
+            font-size: 0.7em;
+          }
+        }
+        &:hover {
+          .hover {
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -281,8 +435,12 @@ main {
     position: relative;
     align-items: flex-start;
     padding: 15px;
-    padding-right: 220px;
+    padding-right: 240px;
     border-radius: 10px;
+    .product_logo {
+      height: 50px;
+      margin-bottom: 10px;
+    }
     strong {
       color: #fab848;
       font-size: 20px;
@@ -298,7 +456,7 @@ main {
     }
 
     .model {
-      width: 200px;
+      width: 240px;
       position: absolute;
       right: 0;
       bottom: 0;
@@ -365,6 +523,24 @@ main {
       }
     }
   }
+  .winner {
+    position: relative;
+    & > * {
+      z-index: 2;
+    }
+    &::after {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      left: -20px;
+      top: 0;
+      width: calc(100% + 40px);
+      height: 100%;
+      background-image: url("../Resources/Images/bg/center_bg.png");
+      background-size: cover;
+      background-position: center;
+    }
+  }
   .winner_list {
     .th {
       flex: 1;
@@ -386,7 +562,7 @@ main {
       overflow: auto;
       .tr {
         border-radius: 10px;
-        &:nth-child(even) {
+        &:nth-child(odd) {
           background: $radial-gradient;
           color: white;
         }
