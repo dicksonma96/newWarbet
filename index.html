@@ -24,11 +24,13 @@
                     <a href="#" class="support_btn row">
                         <img src="Resources/Images/icon/support.svg" alt="">
                     </a>
-                    <div class="button button_2 row">
+                    <div class="custom_tab button_2 row" show-modal="auth_modal" data-show="login_form"
+                        data-hide="auth_form">
                         <img src="Resources/Images/icon/login.svg" alt="">
                         <span>LOG IN</span>
                     </div>
-                    <div class="button button_1 row">
+                    <div class="custom_tab button button_1 row" show-modal="auth_modal" data-show="register_form"
+                        data-hide="auth_form">
                         <img src="Resources/Images/icon/register.svg" alt="">
                         <span>REGISTER</span>
                     </div>
@@ -111,6 +113,7 @@
                         </div>
                         <div class="cards_grid">
                             <div class="card col">
+                                <img class="product_logo" src="Resources/Images/logos/ae_sex.png" alt="">
                                 <strong>Sexy Baccarat/ AE Sexy</strong>
                                 <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
                                     classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
@@ -121,7 +124,8 @@
                                 <img class="model" src="Resources/Images/home/hot1.png" alt="">
                             </div>
                             <div class="card col">
-                                <strong>Sexy Baccarat/ AE Sexy</strong>
+                                <img class="product_logo" src="Resources/Images/logos/cmd.png" alt="">
+                                <strong>CMD365</strong>
                                 <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
                                     classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
                                 <div class="play_btn">
@@ -131,7 +135,8 @@
                                 <img class="model" src="Resources/Images/home/hot2.png" alt="">
                             </div>
                             <div class="card col">
-                                <strong>Sexy Baccarat/ AE Sexy</strong>
+                                <img class="product_logo" src="Resources/Images/logos/vgs.png" alt="">
+                                <strong>Evolution Gaming</strong>
                                 <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
                                     classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
                                 <div class="play_btn">
@@ -141,7 +146,8 @@
                                 <img class="model" src="Resources/Images/home/hot3.png" alt="">
                             </div>
                             <div class="card col">
-                                <strong>Sexy Baccarat/ AE Sexy</strong>
+                                <img class="product_logo" src="Resources/Images/logos/lucky.png" alt="">
+                                <strong>Lucky365</strong>
                                 <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
                                     classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
                                 <div class="play_btn">
@@ -399,6 +405,59 @@
                     <a href="tnc.html">Term & Conditions</a>
                     <a href="affiliate.html">Affiliate</a>
                 </nav>
+            </div>
+        </div>
+
+        <div class="modal auth_modal">
+            <div class="modal_content row">
+                <img src="Resources/Images/other/login_banner.jpg" alt="" class="banner">
+                <div class="auth_content col">
+                    <div class="auth_tab row">
+                        <div class="custom_tab tab_active j-center button_2" data-showTye="flex"
+                            data-show="register_form" data-hide="auth_form">REGISTER</div>
+                        <div class="custom_tab j-center button_2" data-showTye="flex" data-show="login_form"
+                            data-hide="auth_form">LOGIN
+                        </div>
+                        <span class="material-symbols-outlined close_modal">
+                            close
+                        </span>
+                    </div>
+                    <form action="" class="col auth_form register_form">
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Password">
+                        <input type="text" placeholder="Confirm Password">
+                        <input type="text" placeholder="Full Name">
+                        <div class="row" style="gap:10px">
+                            <select>
+                                <option value="+65" selected>+65</option>
+                                <option value="+60">+60</option>
+                            </select>
+                            <input type="text" placeholder="Phone Number">
+                        </div>
+                        <input type="text" placeholder="Affiliate ID/Referral">
+                        <select>
+                            <option value="SGD" selected>SGD</option>
+                            <option value="MYR">MYR</option>
+                        </select>
+                        <div class="play_btn">
+                            <img src="../Resources/Images/icon/play.svg" alt="">
+                            <span>REGISTER NOW</span>
+                        </div>
+                    </form>
+                    <form action="" class="col auth_form login_form hide">
+                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Password">
+                        <a style="text-align: right; color:#F26F51" href="forgot.html">Forgot Password?</a>
+                        <div class="play_btn">
+                            <img src="../Resources/Images/icon/play.svg" alt="">
+                            <span>SIGN IN</span>
+                        </div>
+                        <p style="text-align: center; color:#5F5F5F">
+                            If you encounter any issues while logging in, please contact our <a href="#"
+                                style=" color:#F26F51">Customer Service</a> for further assistance
+                        </p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
