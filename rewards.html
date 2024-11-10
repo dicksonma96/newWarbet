@@ -21,19 +21,51 @@
                     <a href="event.html" class="nav_item col">Events</a>
                 </nav>
                 <div class="right_menu row">
+                    <div class="user_panel col">
+                        <div class="top_row col">
+                            <img class="avatar" src="Resources/Images/other/avatar.png" alt="">
+                            <div class="username row">
+                                Alex
+                                <span class="material-symbols-outlined">
+                                    arrow_drop_down
+                                </span>
+
+                                <a href="#">My Rank</a>
+                            </div>
+                            <div class="progress" data-percent="80"></div>
+                        </div>
+                        <div class="mybalance row">
+                            <span class="material-symbols-outlined refresh_btn">
+                                refresh
+                            </span>
+
+                            <div class="row balance">
+                                <div class="currency">SGD</div>
+                                <div>397</div>
+                            </div>
+                            <div class="row balance">
+                                <img class="currency" src="Resources/Images/icon/w_coin.png" alt="">
+                                <div class="gradient_text">397</div>
+                            </div>
+                        </div>
+                        <div class="user_menu col">
+                            <a href="deposit.html">Deposit</a>
+                            <a href="withdrawal.html">Withdrawal</a>
+                            <a href="transfer.html">Transfer | Promo</a>
+                            <a href="account.html">My Profile</a>
+                            <a href="history.html">History</a>
+                            <a href="referral.html">Referral</a>
+                            <a href="rewards.html">Reward Center</a>
+                            <a href="index.html">Log out</a>
+                        </div>
+                    </div>
                     <a href="#" class="support_btn row">
                         <img src="Resources/Images/icon/support.svg" alt="">
                     </a>
-                    <div class="custom_tab button_2 row" show-modal="auth_modal" data-show="login_form"
-                        data-hide="auth_form">
-                        <img src="Resources/Images/icon/login.svg" alt="">
-                        <span>LOG IN</span>
-                    </div>
-                    <div class="custom_tab button button_1 row" show-modal="auth_modal" data-show="register_form"
-                        data-hide="auth_form">
-                        <img src="Resources/Images/icon/register.svg" alt="">
-                        <span>REGISTER</span>
-                    </div>
+                    <a href="deposit.html" class="button button_1 row">
+                        <img src="Resources/Images/icon/deposit.svg" alt="">
+                        <span>DEPOSIT</span>
+                    </a>
                     <div class="language col">
                         <div class="language_picker row">
                             <img src="Resources/Images/icon/en.png" alt="">
@@ -58,11 +90,11 @@
         <main class="row">
             <div class="body_content content row">
                 <aside class="body_nav col">
-                    <a href="sports.html" class="body_nav_item  row">
+                    <a href="sports.html" class="body_nav_item row">
                         <img src="Resources/Images/icon/sports.png" alt="">
                         <span>Sports</span>
                     </a>
-                    <a href="casino.html" class="body_nav_item body_nav_active row">
+                    <a href="casino.html" class="body_nav_item row">
                         <img src="Resources/Images/icon/casino.png" alt="">
                         <span>Casino</span>
                     </a>
@@ -86,84 +118,178 @@
                     <a class="extra_link" href="about.html">About Us</a>
                     <a class="extra_link" href="tnc.html">Terms & Conditions</a>
                 </aside>
-                <div class="sports_section home_content main_content col">
-                    <section class="main_section col">
-
-                        <div class="section_title row">
-                            <img src="Resources/Images/icon/section_icon/casino.png" alt="">
-                            <strong>Casino</strong>
+                <div class="fund_content main_content col ">
+                    <div class="section_title row">
+                        <img src="Resources/Images/icon/section_icon/default.png" alt="">
+                        <strong>Account</strong>
+                    </div>
+                    <section class="fund row">
+                        <div class="fund_menu col">
+                            <div class="userinfo row">
+                                <img class="badge" src="Resources/Images/vip/classic.png" alt="">
+                                <div class="col">
+                                    <strong>Alex</strong>
+                                    <span style="font-size: 12px;">Rank - <span class="gradient_text">Gold</span></span>
+                                    <div class="mybalance row">
+                                        <div class="row balance">
+                                            <div class="currency">SGD</div>
+                                            <div>397</div>
+                                        </div>
+                                        <div class="row balance">
+                                            <img class="currency" src="Resources/Images/icon/w_coin.png" alt="">
+                                            <div class="gradient_text">397</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu col">
+                                <a href="deposit.html" class="menu_item row">
+                                    <img src="Resources/Images/icon/financial.svg" alt="">
+                                    <span>Financial</span>
+                                </a>
+                                <a href="account.html" class="menu_item row">
+                                    <img src="Resources/Images/icon/account.svg" alt="">
+                                    <span>Account Settings</span>
+                                </a>
+                                <a href="rewards.html" class="menu_item row">
+                                    <img src="Resources/Images/icon/rewards.svg" alt="">
+                                    <span>Rewards</span>
+                                </a>
+                                <a href="contact.html" class="menu_item row">
+                                    <img src="Resources/Images/icon/others.svg" alt="">
+                                    <span>Others</span>
+                                </a>
+                                <a href="index.html" class="menu_item row">
+                                    <img src="Resources/Images/icon/logout.svg" alt="">
+                                    <span>Logout</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="cards_grid">
-                            <div class="card col">
-                                <img class="product_logo" src="Resources/Images/logos/ae_sex.png" alt="">
-                                <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
-                                    classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
-                                <div class="button_1 play_btn">
-                                    <img src="Resources/Images/icon/play.svg" alt="">
-                                    <span>PLAY NOW</span>
-                                </div>
-                                <img class="model" src="Resources/Images/model/ae_sex.png" alt="">
+                        <div class="fund_section  col">
+                            <div class="section_topnav row">
+                                <a href="rewards.html" class="custom_tab active_tab">Rewards Center</a>
+                                <a href="rewards_tnc.html" class="custom_tab ">Terms & Conditions</a>
                             </div>
-                            <div class="card col">
-                                <img class="product_logo" src="Resources/Images/logos/sag.png" alt="">
-                                <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
-                                    classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
-                                <div class="button_1 play_btn">
-                                    <img src="Resources/Images/icon/play.svg" alt="">
-                                    <span>PLAY NOW</span>
+                            <div class="fund_form col">
+                                <div class="input col">
+                                    <div class="label">Reward Types::</div>
+                                    <div class="custom_radios row">
+                                        <div class="radio_content custom_tab tab_active row" data-show="reward_item"
+                                            data-hide="reward_item">
+                                            <span>All</span>
+                                        </div>
+                                        <div class="radio_content custom_tab row" data-show="leading_gadgets"
+                                            data-hide="reward_item">
+                                            <span>LEADING GADGETS</span>
+                                        </div>
+                                        <div class="radio_content custom_tab row" data-show="free_bets"
+                                            data-hide="reward_item">
+                                            <span>FREE BETS</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="model" src="Resources/Images/model/sag.png" alt="">
-                            </div>
-                            <div class="card col">
-                                <img class="product_logo" src="Resources/Images/logos/vgs.png" alt="">
-                                <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
-                                    classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
-                                <div class="button_1 play_btn">
-                                    <img src="Resources/Images/icon/play.svg" alt="">
-                                    <span>PLAY NOW</span>
+                                <br>
+                                <div class="reward_listing">
+
+                                    <div class="reward_item col">
+                                        <img src="Resources/Images/rewards/rolext.png" alt="">
+                                        <span class="name">Rolex GMT Pepsi</span>
+                                        <span class="pts ">
+                                            35,000 points
+                                        </span>
+
+                                        <div class="row btns">
+                                            <div class="button_2">DETAILS</div>
+                                            <div class="button_1">REDEEM</div>
+                                        </div>
+                                    </div>
+                                    <div class="reward_item leading_gadgets col">
+                                        <img src="Resources/Images/rewards/rolext.png" alt="">
+                                        <span class="name">Rolex GMT Pepsi</span>
+                                        <span class="pts ">
+                                            35,000 points
+                                        </span>
+
+                                        <div class="row btns">
+                                            <div class="button_2">DETAILS</div>
+                                            <div class="button_1">REDEEM</div>
+                                        </div>
+                                    </div>
+                                    <div class="reward_item leading_gadgets col">
+                                        <img src="Resources/Images/rewards/rolext.png" alt="">
+                                        <span class="name">Rolex GMT Pepsi</span>
+                                        <span class="pts ">
+                                            35,000 points
+                                        </span>
+
+                                        <div class="row btns">
+                                            <div class="button_2">DETAILS</div>
+                                            <div class="button_1">REDEEM</div>
+                                        </div>
+                                    </div>
+                                    <div class="reward_item free_bets col">
+                                        <img src="Resources/Images/rewards/rolext.png" alt="">
+                                        <span class="name">Rolex GMT Pepsi</span>
+                                        <span class="pts ">
+                                            35,000 points
+                                        </span>
+
+                                        <div class="row btns">
+                                            <div class="button_2">DETAILS</div>
+                                            <div class="button_1">REDEEM</div>
+                                        </div>
+                                    </div>
+                                    <div class="reward_item free_bets col">
+                                        <img src="Resources/Images/rewards/rolext.png" alt="">
+                                        <span class="name">Rolex GMT Pepsi</span>
+                                        <span class="pts ">
+                                            35,000 points
+                                        </span>
+
+                                        <div class="row btns">
+                                            <div class="button_2">DETAILS</div>
+                                            <div class="button_1">REDEEM</div>
+                                        </div>
+                                    </div>
+                                    <div class="reward_item leading_gadgets col">
+                                        <img src="Resources/Images/rewards/rolext.png" alt="">
+                                        <span class="name">Rolex GMT Pepsi</span>
+                                        <span class="pts ">
+                                            35,000 points
+                                        </span>
+
+                                        <div class="row btns">
+                                            <div class="button_2">DETAILS</div>
+                                            <div class="button_1">REDEEM</div>
+                                        </div>
+                                    </div>
+                                    <div class="reward_item col">
+                                        <img src="Resources/Images/rewards/rolext.png" alt="">
+                                        <span class="name">Rolex GMT Pepsi</span>
+                                        <span class="pts ">
+                                            35,000 points
+                                        </span>
+
+                                        <div class="row btns">
+                                            <div class="button_2">DETAILS</div>
+                                            <div class="button_1">REDEEM</div>
+                                        </div>
+                                    </div>
+                                    <div class="reward_item col">
+                                        <img src="Resources/Images/rewards/rolext.png" alt="">
+                                        <span class="name">Rolex GMT Pepsi</span>
+                                        <span class="pts ">
+                                            35,000 points
+                                        </span>
+
+                                        <div class="row btns">
+                                            <div class="button_2">DETAILS</div>
+                                            <div class="button_1">REDEEM</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="model" src="Resources/Images/model/vgs.png" alt="">
                             </div>
-                            <div class="card col">
-                                <img class="product_logo" src="Resources/Images/logos/dgg.png" alt="">
-                                <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
-                                    classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
-                                <div class="button_1 play_btn">
-                                    <img src="Resources/Images/icon/play.svg" alt="">
-                                    <span>PLAY NOW</span>
-                                </div>
-                                <img class="model" src="Resources/Images/model/dgg.png" alt="">
-                            </div>
-                            <div class="card col">
-                                <img class="product_logo" src="Resources/Images/logos/yeebet.png" alt="">
-                                <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
-                                    classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
-                                <div class="button_1 play_btn">
-                                    <img src="Resources/Images/icon/play.svg" alt="">
-                                    <span>PLAY NOW</span>
-                                </div>
-                                <img class="model" src="Resources/Images/model/yeebet.png" alt="">
-                            </div>
-                            <div class="card col">
-                                <img class="product_logo" src="Resources/Images/logos/wm.png" alt="">
-                                <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
-                                    classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
-                                <div class="button_1 play_btn">
-                                    <img src="Resources/Images/icon/play.svg" alt="">
-                                    <span>PLAY NOW</span>
-                                </div>
-                                <img class="model" src="Resources/Images/model/wm.png" alt="">
-                            </div>
-                            <div class="card col">
-                                <img class="product_logo" src="Resources/Images/logos/big.png" alt="">
-                                <p>Indulge in a luxurious and thrilling gaming experience with Sexy Baccarat, combining
-                                    classic Baccarat gameplay with the allure of live, glamorous dealers.</p>
-                                <div class="button_1 play_btn">
-                                    <img src="Resources/Images/icon/play.svg" alt="">
-                                    <span>PLAY NOW</span>
-                                </div>
-                                <img class="model" src="Resources/Images/model/big.png" alt="">
-                            </div>
+
                         </div>
                     </section>
                 </div>
@@ -248,6 +374,7 @@
                 </nav>
             </div>
         </div>
+
         <div class="modal auth_modal">
             <div class="modal_content row">
                 <img src="Resources/Images/other/login_banner.jpg" alt="" class="banner">
