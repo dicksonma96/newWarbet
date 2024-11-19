@@ -1,41 +1,92 @@
-const fishing = [
+const provider = [
   {
-    name: "Fishing All Star",
-    img: "1",
-    hot: true,
-    new: true,
+    name: "Show All",
+    subnav: ["All", "Slot", "Fishing"],
+    game: [
+      {
+        name: "Fishing All Star",
+        img: "1",
+        hot: true,
+        new: true,
+      },
+      {
+        name: "Boom Legend",
+        img: "2",
+        hot: true,
+        new: false,
+      },
+      {
+        name: "Mega Fishing",
+        img: "3",
+        hot: false,
+        new: false,
+      },
+      {
+        name: "Dragon Fortune",
+        img: "4",
+        hot: false,
+        new: true,
+      },
+      {
+        name: "Happy Fishing",
+        img: "5",
+        hot: false,
+        new: false,
+      },
+    ],
+    defaultActive: true,
   },
   {
-    name: "Boom Legend",
-    img: "2",
-    hot: true,
-    new: false,
+    name: "spgb",
+    subnav: [],
+    game: [
+      {
+        name: "Dragon Fortune",
+        img: "4",
+        hot: false,
+        new: true,
+      },
+      {
+        name: "Happy Fishing",
+        img: "5",
+        hot: false,
+        new: false,
+      },
+    ],
   },
   {
-    name: "Mega Fishing",
-    img: "3",
-    hot: false,
-    new: false,
-  },
-  {
-    name: "Dragon Fortune",
-    img: "4",
-    hot: false,
-    new: true,
-  },
-  {
-    name: "Happy Fishing",
-    img: "5",
-    hot: false,
-    new: false,
+    name: "jili",
+    subnav: [],
+    game: [
+      {
+        name: "Fishing All Star",
+        img: "1",
+        hot: true,
+        new: true,
+      },
+      {
+        name: "Boom Legend",
+        img: "2",
+        hot: true,
+        new: false,
+      },
+      {
+        name: "Mega Fishing",
+        img: "3",
+        hot: false,
+        new: false,
+      },
+    ],
   },
 ];
 
 export default function FishingLobby() {
+  let lobby_nav = $('<nav class="lobby_nav row"></nav>');
   let current_lobby = $('<div class="lobby"></div>');
 
-  function populateGame() {
-    fishing.forEach((item) => {
+  function populateGame(game, subnav) {
+    current_lobby.empty();
+    game.forEach((item) => {
       let badges = $('<div class="badges col"></div>');
 
       let fish_item = $(`<div class="game col">
@@ -62,7 +113,31 @@ export default function FishingLobby() {
       fish_item.appendTo(current_lobby);
     });
   }
-  populateGame();
 
+  provider.forEach((item) => {
+    const { name, subnav, game } = item;
+    let nav_item = $(
+      `<div class="nav_item ${
+        item.defaultActive ? "nav_active" : ""
+      } row" data-show="${name}_lobby"></div>`
+    );
+    if (name == "Show All") nav_item.append("<span>Show All</span>");
+    else
+      nav_item.append(`<img src="Resources/Images/small_logos/${name}.png"/>`);
+
+    if (item.defaultActive) {
+      populateGame(game, subnav);
+    }
+
+    nav_item.on("click", function () {
+      $(".nav_item").removeClass("nav_active");
+      $(this).addClass("nav_active");
+      populateGame(game, subnav);
+    });
+
+    nav_item.appendTo(lobby_nav);
+  });
+
+  lobby_nav.appendTo("#fishing_lobby");
   current_lobby.appendTo("#fishing_lobby");
 }

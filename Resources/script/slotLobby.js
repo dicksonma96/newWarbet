@@ -26,37 +26,82 @@ const provider = [
     defaultActive: true,
   },
   {
-    name: "ae_sex",
+    name: "spgb",
     subnav: ["All", "Slot", "Fishing", "EGame"],
     game: [],
   },
   {
-    name: "sag",
+    name: "lucky",
     subnav: ["All", "Slot", "Fishing", "EGame"],
     game: [],
   },
   {
-    name: "vgs",
+    name: "ppy",
     subnav: ["All", "Slot", "Fishing", "EGame"],
     game: [],
   },
   {
-    name: "dgg",
+    name: "jili",
     subnav: ["All", "Slot", "Fishing", "EGame"],
     game: [],
   },
   {
-    name: "yeebet",
+    name: "ygr",
     subnav: ["All", "Slot", "Fishing", "EGame"],
     game: [],
   },
   {
-    name: "wm",
+    name: "simple",
     subnav: ["All", "Slot", "Fishing", "EGame"],
     game: [],
   },
   {
-    name: "big",
+    name: "pussy",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "next",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "mk",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "mega",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "funta",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "funky",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "fachai",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "cq9",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "918",
+    subnav: ["All", "Slot", "Fishing", "EGame"],
+    game: [],
+  },
+  {
+    name: "888king",
     subnav: ["All", "Slot", "Fishing", "EGame"],
     game: [],
   },
@@ -129,7 +174,8 @@ export default function SlotLobby() {
       } row" data-show="${name}_lobby"></div>`
     );
     if (name == "Show All") nav_item.append("<span>Show All</span>");
-    else nav_item.append(`<img src="Resources/Images/logos/${name}.png"/>`);
+    else
+      nav_item.append(`<img src="Resources/Images/small_logos/${name}.png"/>`);
 
     if (item.defaultActive) {
       populateLobby(game, subnav);
